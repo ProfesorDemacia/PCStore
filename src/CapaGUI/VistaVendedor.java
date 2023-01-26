@@ -38,6 +38,7 @@ public class VistaVendedor extends javax.swing.JFrame {
         lbl_rut.setText(auxVista.rut_usu);
         java.awt.Font fuente = new java.awt.Font("Tahoma",java.awt.Font.BOLD,18);
         table_detalleProd.getTableHeader().setFont(fuente);
+        monto_final = 0;
         
     }
     
@@ -144,6 +145,7 @@ public class VistaVendedor extends javax.swing.JFrame {
         {
             if(this.txt_cantidadProd.getText().length()!=0)
             {
+                
                 NegocioProducto auxNegocioProducto = new NegocioProducto();
                 if(auxNegocioProducto.existeProducto(Integer.parseInt(txt_codProd.getText())))
                 {
