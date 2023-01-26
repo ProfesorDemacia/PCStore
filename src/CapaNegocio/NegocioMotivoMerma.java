@@ -56,7 +56,7 @@ public class NegocioMotivoMerma {
            while(this.getConec1().getDbresultSet().next()) 
            {
               MotivoMerma auxMotivoMerma = new MotivoMerma();
-              auxMotivoMerma.setId_prod(this.getConec1().getDbresultSet().getInt("id_eliminar_prod"));
+              auxMotivoMerma.setId_eliminar_prod(this.getConec1().getDbresultSet().getInt("id_eliminar_prod"));
               auxMotivoMerma.setId_prod(this.getConec1().getDbresultSet().getInt("id_prod"));
               auxMotivoMerma.setMarca_prod(this.getConec1().getDbresultSet().getString("marca_prod"));
               auxMotivoMerma.setModelo_prod(this.getConec1().getDbresultSet().getString("modelo_prod"));
