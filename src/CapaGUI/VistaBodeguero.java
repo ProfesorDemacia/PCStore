@@ -6,8 +6,10 @@
 package CapaGUI;
 
 import CapaDTO.CategoriaProducto;
+import CapaDTO.MotivoMerma;
 import CapaDTO.Producto;
 import CapaNegocio.NegocioCategoriaProducto;
+import CapaNegocio.NegocioMotivoMerma;
 import CapaNegocio.NegocioProducto;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -64,6 +66,7 @@ public class VistaBodeguero extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         bto_buscar = new javax.swing.JButton();
         bto_actualizar = new javax.swing.JButton();
+        bto_merma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(6);
@@ -202,6 +205,16 @@ public class VistaBodeguero extends javax.swing.JFrame {
             }
         });
 
+        bto_merma.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        bto_merma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pagar.png"))); // NOI18N
+        bto_merma.setText("Productos Mermados");
+        bto_merma.setToolTipText("");
+        bto_merma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bto_mermaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -225,8 +238,9 @@ public class VistaBodeguero extends javax.swing.JFrame {
                     .addComponent(bto_agregarProd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bto_modificarProd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bto_eliminarProd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bto_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(180, Short.MAX_VALUE))
+                    .addComponent(bto_actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bto_merma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,15 +254,16 @@ public class VistaBodeguero extends javax.swing.JFrame {
                     .addComponent(bto_buscar))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(bto_agregarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(63, 63, 63)
                         .addComponent(bto_modificarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(69, 69, 69)
                         .addComponent(bto_eliminarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
-                        .addComponent(bto_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bto_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68)
+                        .addComponent(bto_merma, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(191, Short.MAX_VALUE))
         );
@@ -327,6 +342,12 @@ public class VistaBodeguero extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_box_categoriaItemStateChanged
 
+    private void bto_mermaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_mermaActionPerformed
+        // TODO add your handling code here:
+        VistaMerma pMenu = new VistaMerma();
+        pMenu.setVisible(true);
+    }//GEN-LAST:event_bto_mermaActionPerformed
+
     
     public void buscarCategoria(int id_categoria_prod){
         try {
@@ -369,18 +390,35 @@ public class VistaBodeguero extends javax.swing.JFrame {
             {
                 int fila_seleccionada = this.table_prod.getSelectedRow();
                 if(fila_seleccionada > -1)
-                    JOptionPane.showInputDialog("");
+                    
                 {
-                    int respuesta = JOptionPane.showConfirmDialog(null,"Estas seguro de continuar con el proceso de eliminacion?.\nEste proceso no se puede deshacer.", "Mensaje", JOptionPane.YES_NO_OPTION,  JOptionPane.QUESTION_MESSAGE);
-                    if(respuesta == JOptionPane.YES_OPTION)
+                    String motivo = JOptionPane.showInputDialog("Motivo de la merma/eliminacion");
+                    if (motivo.length() <= 3 )
                     {
-                        
-                        String id = this.table_prod.getModel().getValueAt(fila_seleccionada, 0).toString();
-                        NegocioProducto auxNegocio = new NegocioProducto();
-                        auxNegocio.eliminarProducto(Integer.parseInt(id));
-                        
-                        JOptionPane.showMessageDialog(null, "Producto eliminado satisfactoriamente.", "Mensajes", JOptionPane.INFORMATION_MESSAGE);
-                        cargarListadoDeProductos();
+                        JOptionPane.showMessageDialog(null, "El motivo tiene que ser mayor a 3 caracteres");
+                    }else{
+                        int respuesta = JOptionPane.showConfirmDialog(null,"Estas seguro de continuar con el proceso de eliminacion?.\nEste proceso no se puede deshacer.", "Mensaje", JOptionPane.YES_NO_OPTION,  JOptionPane.QUESTION_MESSAGE);
+                        if(respuesta == JOptionPane.YES_OPTION)
+                        {
+
+                            String id = this.table_prod.getModel().getValueAt(fila_seleccionada, 0).toString();
+                            NegocioProducto auxNegocio = new NegocioProducto();
+                            auxNegocio.eliminarProducto(Integer.parseInt(id));
+                            
+                            
+                            String marca_prod = this.table_prod.getModel().getValueAt(fila_seleccionada, 2).toString();
+                            String modelo_prod = this.table_prod.getModel().getValueAt(fila_seleccionada, 3).toString();
+                            NegocioMotivoMerma auxNegocioMotivoMerma = new NegocioMotivoMerma();
+                            MotivoMerma auxMotivoMerma = new MotivoMerma();
+                            auxMotivoMerma.setId_prod(Integer.parseInt(id));
+                            auxMotivoMerma.setMarca_prod(marca_prod);
+                            auxMotivoMerma.setModelo_prod(modelo_prod);
+                            auxMotivoMerma.setMotivo_merma(motivo);
+                            auxNegocioMotivoMerma.insertarMotivoMerma(auxMotivoMerma);
+
+                            JOptionPane.showMessageDialog(null, "Producto eliminado satisfactoriamente.", "Mensajes", JOptionPane.INFORMATION_MESSAGE);
+                            cargarListadoDeProductos();
+                        }
                     }
                 }
                 
@@ -560,6 +598,7 @@ public class VistaBodeguero extends javax.swing.JFrame {
     private javax.swing.JButton bto_buscar;
     private javax.swing.JButton bto_cerrar;
     private javax.swing.JButton bto_eliminarProd;
+    private javax.swing.JButton bto_merma;
     private javax.swing.JButton bto_modificarProd;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

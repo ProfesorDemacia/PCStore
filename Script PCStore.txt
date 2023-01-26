@@ -77,8 +77,19 @@ id_detalle_venta int references detalle_venta(id_detalle_venta),
 PRIMARY KEY(id_venta)
 );
 
+
+CREATE TABLE motivo_merma (
+id_eliminar_prod int AUTO_INCREMENT,
+id_prod int references producto(id_prod),
+marca_prod varchar(50) NOT NULL,
+modelo_prod varchar(50) NOT NULL,
+motivo_merma varchar(100) NOT NULL,
+PRIMARY KEY (id_eliminar_prod)
+);
+
 ALTER TABLE producto AUTO_INCREMENT=10;
 ALTER TABLE categoria_producto AUTO_INCREMENT=10;
+ALTER TABLE motivo_merma AUTO_INCREMENT=10;
 
 ALTER TABLE producto ADD FOREIGN KEY(id_categoria_prod) REFERENCES categoria_producto(id_categoria_prod);
 ALTER TABLE usuario ADD FOREIGN KEY(id_tipo_usu) REFERENCES tipo_usuario(id_tipo_usu);
@@ -113,4 +124,4 @@ INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_pro
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('Razer','Deathadder Essential',24990,'Razer DeathAdder Essential 6400DPI Wired PC Gaming Mouse',30,'Nuevo producto',11);
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('ReDragon','M610 Gainer',8500,'Mouse Gamer Redragon Gainer M610, 7 Botones, 3200DPI, Agarre Palma/Garra, RGB, Negro',40,'Nuevo producto',11);
 
-INSERT INTO detalle_venta(folio_detalle_venta,id_prod,nombre_categoria,marca_prod,modelo_prod,precio_unitario_prod,precio_total_detalle,rut_cli,rut_usu,cantidad_prod) VALUES (10,10,'Monitores','ASUS','VA24EHE',100000,200000,'18786836-4','12610336-0',11);
+

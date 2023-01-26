@@ -176,8 +176,9 @@
                       <Component id="bto_modificarProd" max="32767" attributes="0"/>
                       <Component id="bto_eliminarProd" max="32767" attributes="0"/>
                       <Component id="bto_actualizar" max="32767" attributes="0"/>
+                      <Component id="bto_merma" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="180" max="32767" attributes="0"/>
+                  <EmptySpace pref="164" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -194,8 +195,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="bto_agregarProd" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                           <Component id="bto_modificarProd" min="-2" pref="69" max="-2" attributes="0"/>
@@ -203,6 +203,8 @@
                           <Component id="bto_eliminarProd" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="bto_actualizar" min="-2" pref="59" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="bto_merma" min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane1" min="-2" pref="670" max="-2" attributes="0"/>
                   </Group>
@@ -350,6 +352,21 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bto_actualizarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bto_merma">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="24" style="0"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Imagenes/pagar.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Productos Mermados"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bto_mermaActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

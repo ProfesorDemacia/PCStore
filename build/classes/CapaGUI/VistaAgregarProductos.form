@@ -149,7 +149,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabel11" max="32767" attributes="0"/>
@@ -157,8 +157,8 @@
                               <Component id="jLabel12" alignment="0" pref="163" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_stock" alignment="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txt_stock" alignment="0" pref="230" max="32767" attributes="0"/>
                               <Component id="txt_comentario" alignment="0" max="32767" attributes="0"/>
                               <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -166,7 +166,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jComboBoxCategoria" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxCategoria" min="-2" pref="230" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -176,22 +176,22 @@
                           </Group>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txt_marcaProd" pref="204" max="32767" attributes="0"/>
-                              <Component id="txt_precioProd" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_precioProd" alignment="0" pref="230" max="32767" attributes="0"/>
                               <Component id="txt_modelo" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_marcaProd" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="111" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="85" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="162" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="bto_agregar" min="-2" pref="123" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                           <Component id="bto_SalidarProducto" min="-2" pref="123" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel10" min="-2" pref="247" max="-2" attributes="0"/>
@@ -221,7 +221,7 @@
                       <Component id="jLabel6" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="txt_modelo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="9" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="txt_precioProd" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -521,6 +521,9 @@
             <Component class="javax.swing.JTextArea" name="txt_descrip">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Monospaced" size="16" style="0"/>
+                </Property>
                 <Property name="rows" type="int" value="5"/>
               </Properties>
             </Component>
