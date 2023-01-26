@@ -269,6 +269,7 @@ public class VistaCategorias extends javax.swing.JFrame {
     private void bto_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_actualizarActionPerformed
         // TODO add your handling code here:
         cargarListadoCategoria();
+        txt_codCate.setText("");
     }//GEN-LAST:event_bto_actualizarActionPerformed
 public void buscarCategoriaID(String id_cate)
     {

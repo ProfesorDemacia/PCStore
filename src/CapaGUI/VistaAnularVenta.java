@@ -464,6 +464,7 @@ public class VistaAnularVenta extends javax.swing.JFrame {
     private void bto_buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_buscar1ActionPerformed
         // TODO add your handling code here:
         buscarVenta();
+        txt_idVenta.setText("");
     }//GEN-LAST:event_bto_buscar1ActionPerformed
 
     /**

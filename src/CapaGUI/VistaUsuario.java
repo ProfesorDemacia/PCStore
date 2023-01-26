@@ -406,6 +406,7 @@ public class VistaUsuario extends javax.swing.JFrame {
     private void bto_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_actualizarActionPerformed
         // TODO add your handling code here:
         buscarUsuario();
+        txt_rutUsu.setText("");
     }//GEN-LAST:event_bto_actualizarActionPerformed
 
     private void txt_rutUsuKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_rutUsuKeyTyped

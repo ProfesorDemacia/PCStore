@@ -325,6 +325,7 @@ public class VistaBodeguero extends javax.swing.JFrame {
     private void bto_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bto_actualizarActionPerformed
         // TODO add your handling code here:
         cargarListadoDeProductos();
+        txt_codProd.setText("");
     }//GEN-LAST:event_bto_actualizarActionPerformed
 
     private void box_categoriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_box_categoriaItemStateChanged
