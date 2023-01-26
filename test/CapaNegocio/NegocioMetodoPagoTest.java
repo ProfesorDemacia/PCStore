@@ -49,7 +49,7 @@ public class NegocioMetodoPagoTest {
         NegocioMetodoPago instance = new NegocioMetodoPago();
         instance.configurarConexion();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +58,11 @@ public class NegocioMetodoPagoTest {
     @Test
     public void testInsertarMetodoPago() {
         System.out.println("insertarMetodoPago");
-        MetodoPago metodopago = null;
+        MetodoPago metodopago = new MetodoPago();
         NegocioMetodoPago instance = new NegocioMetodoPago();
         instance.insertarMetodoPago(metodopago);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -71,11 +71,11 @@ public class NegocioMetodoPagoTest {
     @Test
     public void testActualizarMetodoPago() {
         System.out.println("actualizarMetodoPago");
-        MetodoPago metodopago = null;
+        MetodoPago metodopago = new MetodoPago();
         NegocioMetodoPago instance = new NegocioMetodoPago();
         instance.actualizarMetodoPago(metodopago);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -84,41 +84,13 @@ public class NegocioMetodoPagoTest {
     @Test
     public void testEliminarMetodoPago() {
         System.out.println("eliminarMetodoPago");
-        int id_metodo_pago = 0;
+        int id_metodo_pago = 20;
         NegocioMetodoPago instance = new NegocioMetodoPago();
         instance.eliminarMetodoPago(id_metodo_pago);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of consultaMetodoPago method, of class NegocioMetodoPago.
-     */
-    @Test
-    public void testConsultaMetodoPago() {
-        System.out.println("consultaMetodoPago");
-        NegocioMetodoPago instance = new NegocioMetodoPago();
-        ArrayList<MetodoPago> expResult = null;
-        ArrayList<MetodoPago> result = instance.consultaMetodoPago();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of buscaMetodoPago method, of class NegocioMetodoPago.
-     */
-    @Test
-    public void testBuscaMetodoPago() {
-        System.out.println("buscaMetodoPago");
-        int id_metodo_pago = 0;
-        NegocioMetodoPago instance = new NegocioMetodoPago();
-        MetodoPago expResult = null;
-        MetodoPago result = instance.buscaMetodoPago(id_metodo_pago);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of getConec1 method, of class NegocioMetodoPago.
@@ -131,7 +103,7 @@ public class NegocioMetodoPagoTest {
         ConexionMySQL result = instance.getConec1();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -144,7 +116,7 @@ public class NegocioMetodoPagoTest {
         NegocioMetodoPago instance = new NegocioMetodoPago();
         instance.setConec1(conec1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

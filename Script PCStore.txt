@@ -102,27 +102,15 @@ INSERT INTO categoria_producto (nombre_categoria) VALUES ('Monitores');
 INSERT INTO categoria_producto (nombre_categoria) VALUES ('Mouse');
 INSERT INTO categoria_producto (nombre_categoria) VALUES ('Procesadores');
 
-INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('1-9','Juan','Perez',400000,'cajero@correo.cl','cajero1',1);
-INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('2-8','Javiera','Riquelme',450000,'vendedor@correo.cl','vendedor1',2);
-INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('3-7','Javier','Araya',500000,'bodeguero@correo.cl','bodega1',3);
-INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('4-6','Rodrigo','Santana',550000,'admin@correo.cl','admin1',4);
-INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('5-5','Juan','Gonzalez',800000,'dueño@correo.cl','dueno1',4);
+INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('19859199-8','Juan','Perez',400000,'cajero@correo.cl','cajero1',1);
+INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('12610336-0','Javiera','Riquelme',450000,'vendedor@correo.cl','vendedor1',2);
+INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('20191030-7','Javier','Araya',500000,'bodeguero@correo.cl','bodega1',3);
+INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('19890682-4','Rodrigo','Santana',550000,'admin@correo.cl','admin1',4);
+INSERT INTO usuario(rut_usu,nombre_usu,apellido_usu,sueldo_usu,correo_usu,contrasena_usu,id_tipo_usu) VALUES ('11941230-7','Juan','Gonzalez',800000,'dueño@correo.cl','dueno1',4);
 
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('ASUS','VA24EHE',100000,'Monitor ASUS VA24EHE Eye Care: 23.8 pulgadas, Full HD',80,'Nuevo producto',10);
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('AOC','E2070SWHN',79990,'Monitor AOC 20, LED 1600x900, 60Hz, 5ms, Panel TN, Conectividad HDMI',50,'Nuevo producto',10);
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('Razer','Deathadder Essential',24990,'Razer DeathAdder Essential 6400DPI Wired PC Gaming Mouse',30,'Nuevo producto',11);
 INSERT INTO producto(marca_prod,modelo_prod,precio_unitario_prod,descripcion_prod,stock_prod,comentario,id_categoria_prod) VALUES ('ReDragon','M610 Gainer',8500,'Mouse Gamer Redragon Gainer M610, 7 Botones, 3200DPI, Agarre Palma/Garra, RGB, Negro',40,'Nuevo producto',11);
 
-INSERT INTO detalle_venta(folio_detalle_venta,id_prod,nombre_categoria,marca_prod,modelo_prod,precio_unitario_prod,precio_total_detalle,rut_cli,rut_usu,cantidad_prod) VALUES (10,10,'Monitores','ASUS','VA24EHE',100000,200000,'18786836-4','2-8',11);
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO detalle_venta(folio_detalle_venta,id_prod,nombre_categoria,marca_prod,modelo_prod,precio_unitario_prod,precio_total_detalle,rut_cli,rut_usu,cantidad_prod) VALUES (10,10,'Monitores','ASUS','VA24EHE',100000,200000,'18786836-4','12610336-0',11);

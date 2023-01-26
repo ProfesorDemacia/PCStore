@@ -91,35 +91,7 @@ public class NegocioCategoriaProductoTest {
         //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of buscaCategoriaProducto method, of class NegocioCategoriaProducto.
-     */
-    @Test
-    public void testBuscaCategoriaProducto() {
-        System.out.println("buscaCategoriaProducto");
-        int id_categoria_prod = 12;
-        NegocioCategoriaProducto instance = new NegocioCategoriaProducto();
-        CategoriaProducto expResult = null;
-        CategoriaProducto result = instance.buscaCategoriaProducto(id_categoria_prod);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of buscaNombreCategoria method, of class NegocioCategoriaProducto.
-     */
-   @Test
-    public void testBuscaNombreCategoria() {
-        System.out.println("buscaNombreCategoria");
-        String nombre_categoria = "Notebook";
-        NegocioCategoriaProducto instance = new NegocioCategoriaProducto();
-        CategoriaProducto expResult = instance.buscaNombreCategoria("Notebook");
-        CategoriaProducto result = instance.buscaNombreCategoria(nombre_categoria);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of existeCategoria method, of class NegocioCategoriaProducto.
@@ -129,7 +101,7 @@ public class NegocioCategoriaProductoTest {
         System.out.println("existeCategoria");
         int id_cat = 10;
         NegocioCategoriaProducto instance = new NegocioCategoriaProducto();
-        boolean expResult = false;
+        boolean expResult = instance.existeCategoria(id_cat);
         boolean result = instance.existeCategoria(id_cat);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

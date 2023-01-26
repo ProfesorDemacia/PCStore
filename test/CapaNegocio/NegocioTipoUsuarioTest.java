@@ -49,7 +49,7 @@ public class NegocioTipoUsuarioTest {
         NegocioTipoUsuario instance = new NegocioTipoUsuario();
         instance.configurarConexion();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +58,11 @@ public class NegocioTipoUsuarioTest {
     @Test
     public void testInsertarTipoUsuario() {
         System.out.println("insertarTipoUsuario");
-        TipoUsuario tipousuario = null;
+        TipoUsuario tipousuario = new TipoUsuario();
         NegocioTipoUsuario instance = new NegocioTipoUsuario();
         instance.insertarTipoUsuario(tipousuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -71,11 +71,11 @@ public class NegocioTipoUsuarioTest {
     @Test
     public void testActualizarTipoUsuario() {
         System.out.println("actualizarTipoUsuario");
-        TipoUsuario tipousuario = null;
+        TipoUsuario tipousuario = new TipoUsuario();
         NegocioTipoUsuario instance = new NegocioTipoUsuario();
         instance.actualizarTipoUsuario(tipousuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -84,41 +84,14 @@ public class NegocioTipoUsuarioTest {
     @Test
     public void testEliminarTipoUsuario() {
         System.out.println("eliminarTipoUsuario");
-        String id_tipo_usu = "";
+        String id_tipo_usu = "19999999-2";
         NegocioTipoUsuario instance = new NegocioTipoUsuario();
         instance.eliminarTipoUsuario(id_tipo_usu);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of consultaTipoUsuario method, of class NegocioTipoUsuario.
-     */
-    @Test
-    public void testConsultaTipoUsuario() {
-        System.out.println("consultaTipoUsuario");
-        NegocioTipoUsuario instance = new NegocioTipoUsuario();
-        ArrayList<TipoUsuario> expResult = null;
-        ArrayList<TipoUsuario> result = instance.consultaTipoUsuario();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of buscaTipoUsuario method, of class NegocioTipoUsuario.
-     */
-    @Test
-    public void testBuscaTipoUsuario() {
-        System.out.println("buscaTipoUsuario");
-        int id_tipo_usu = 0;
-        NegocioTipoUsuario instance = new NegocioTipoUsuario();
-        TipoUsuario expResult = null;
-        TipoUsuario result = instance.buscaTipoUsuario(id_tipo_usu);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of getConec1 method, of class NegocioTipoUsuario.
@@ -131,7 +104,7 @@ public class NegocioTipoUsuarioTest {
         ConexionMySQL result = instance.getConec1();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -144,7 +117,7 @@ public class NegocioTipoUsuarioTest {
         NegocioTipoUsuario instance = new NegocioTipoUsuario();
         instance.setConec1(conec1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

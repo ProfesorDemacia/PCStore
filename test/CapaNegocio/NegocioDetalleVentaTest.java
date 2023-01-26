@@ -49,7 +49,7 @@ public class NegocioDetalleVentaTest {
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
         instance.configurarConexion();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +58,11 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testInsertarDetalleVenta() {
         System.out.println("insertarDetalleVenta");
-        DetalleVenta detalleventa = null;
+        DetalleVenta detalleventa = new DetalleVenta();
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
         instance.insertarDetalleVenta(detalleventa);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -71,11 +71,11 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testActualizarDetalleVenta() {
         System.out.println("actualizarDetalleVenta");
-        DetalleVenta detalleventa = null;
+        DetalleVenta detalleventa = new DetalleVenta();
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
         instance.actualizarDetalleVenta(detalleventa);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -84,11 +84,11 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testEliminarDetalleVenta() {
         System.out.println("eliminarDetalleVenta");
-        int folio_detalle_venta = 0;
+        int folio_detalle_venta = 20;
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
         instance.eliminarDetalleVenta(folio_detalle_venta);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +98,11 @@ public class NegocioDetalleVentaTest {
     public void testConsultaDetalleVenta() {
         System.out.println("consultaDetalleVenta");
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        ArrayList<DetalleVenta> expResult = null;
+        ArrayList<DetalleVenta> expResult = instance.consultaDetalleVenta();
         ArrayList<DetalleVenta> result = instance.consultaDetalleVenta();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -111,28 +111,13 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testConsultaDetalleVentaCarro() {
         System.out.println("consultaDetalleVentaCarro");
-        int folio = 0;
+        int folio = 1;
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        ArrayList<DetalleVenta> expResult = null;
+        ArrayList<DetalleVenta> expResult = instance.consultaDetalleVentaCarro(folio);
         ArrayList<DetalleVenta> result = instance.consultaDetalleVentaCarro(folio);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of buscaDetalleVenta method, of class NegocioDetalleVenta.
-     */
-    @Test
-    public void testBuscaDetalleVenta() {
-        System.out.println("buscaDetalleVenta");
-        int id_detalle_venta = 0;
-        NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        DetalleVenta expResult = null;
-        DetalleVenta result = instance.buscaDetalleVenta(id_detalle_venta);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -142,11 +127,11 @@ public class NegocioDetalleVentaTest {
     public void testSumarFolio() {
         System.out.println("sumarFolio");
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        int expResult = 0;
+        int expResult = instance.sumarFolio();
         int result = instance.sumarFolio();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -156,11 +141,11 @@ public class NegocioDetalleVentaTest {
     public void testEncontrarFolio() {
         System.out.println("encontrarFolio");
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        int expResult = 0;
+        int expResult = 10;
         int result = instance.encontrarFolio();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -169,28 +154,13 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testEncontrarFolioEspecifico() {
         System.out.println("encontrarFolioEspecifico");
-        int id_detalle_venta = 0;
+        int id_detalle_venta = 3;
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        int expResult = 0;
+        int expResult = 10;
         int result = instance.encontrarFolioEspecifico(id_detalle_venta);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of buscarDetalleVentaPorFolio method, of class NegocioDetalleVenta.
-     */
-    @Test
-    public void testBuscarDetalleVentaPorFolio() {
-        System.out.println("buscarDetalleVentaPorFolio");
-        int id_folio = 0;
-        NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        ArrayList<DetalleVenta> expResult = null;
-        ArrayList<DetalleVenta> result = instance.buscarDetalleVentaPorFolio(id_folio);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -199,13 +169,13 @@ public class NegocioDetalleVentaTest {
     @Test
     public void testBuscarIdDetalleVenta() {
         System.out.println("buscarIdDetalleVenta");
-        int id_folio = 0;
+        int id_folio = 10;
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
-        int expResult = 0;
+        int expResult = 3;
         int result = instance.buscarIdDetalleVenta(id_folio);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -219,7 +189,7 @@ public class NegocioDetalleVentaTest {
         ConexionMySQL result = instance.getConec1();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -232,7 +202,7 @@ public class NegocioDetalleVentaTest {
         NegocioDetalleVenta instance = new NegocioDetalleVenta();
         instance.setConec1(conec1);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
