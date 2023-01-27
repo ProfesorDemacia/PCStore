@@ -278,7 +278,7 @@ public class VistaAnularVenta extends javax.swing.JFrame {
 
         bto_buscar1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         bto_buscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizar.png"))); // NOI18N
-        bto_buscar1.setText("Refrecar Tabla");
+        bto_buscar1.setText("Actualizar Tabla");
         bto_buscar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bto_buscar1ActionPerformed(evt);
